@@ -10,7 +10,8 @@ import hero_title from "./hero_title.png";
 import info_icon from "./info_icon.png";
 import instagram_icon from "./instagram_icon.png";
 import logo from "./logo.png";
-import netflix_icon from "./netflix_favicon.ico";
+import netflix_icon_bg from "./netflix_icon_bg.ico";
+import netflix_icon_no_bg from "./netflix_icon_no_bg.ico";
 import netflix_spinner from "./netflix_spinner.gif";
 import play_icon from "./play_icon.png";
 import profile_image from "./profile_img.png";
@@ -19,7 +20,8 @@ import twitter_icon from "./twitter_icon.png";
 import youtube_icon from "./youtube_icon.png";
 
 export const assets = {
-    netflix_icon,
+    netflix_icon_bg,
+    netflix_icon_no_bg,
     back_arrow_icon,
     background_banner,
     bell_icon,
