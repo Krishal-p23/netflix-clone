@@ -57,7 +57,7 @@ const Navbar = () => {
                                     alt="profile"
                                     width={32}
                                     height={32} />
-                                <span>{session.user.name}</span>
+                                <span>{session?.user?.name}</span>
                             </DropdownMenuItem>
                         </DropdownMenuGroup>
                         <DropdownMenuSeparator className="bg-[#ffffff40]" />

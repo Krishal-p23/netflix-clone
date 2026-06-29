@@ -32,3 +32,5 @@ const movieSchema = new Schema({
 }, { timestamps: true });
 
 const Movie = models?.Movie || model("Movie", movieSchema);
+
+export default Movie;
