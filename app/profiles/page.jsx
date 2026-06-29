@@ -28,7 +28,7 @@ const Profiles = () => {
                     alt="profile"
                     onClick={handleProfileClick} />
                 <h3 className="text-[#e5e5e5] text-[18.72px] text-center">
-                    {session.user.name || "Loading..."}
+                    {session?.user?.name || "Loading..."}
                 </h3>
             </div>
         </div>
