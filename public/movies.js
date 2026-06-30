@@ -4,9 +4,9 @@ const movies = [
     description:
       "A large and gentle rabbit takes a stand against bullying in this animated short film.",
     videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
     thumbnailUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+      "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg",
     genre: "Animation",
     duration: "10 min",
     rating: 6.4,
@@ -17,9 +17,9 @@ const movies = [
     description:
       "A young girl embarks on a quest to find her pet dragon in this action-packed fantasy tale.",
     videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
     thumbnailUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
+      "https://durian.blender.org/wp-content/uploads/2010/05/sintel_poster.jpg",
     genre: "Fantasy",
     duration: "14 min",
     rating: 7.4,
@@ -30,40 +30,34 @@ const movies = [
     description:
       "A group of warriors and scientists gather in Amsterdam to stage a crucial event from the past.",
     videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "https://download.blender.org/durian/movies/tears_of_steel/tears_of_steel_720p.mp4",
     thumbnailUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg",
+      "https://mango.blender.org/wp-content/uploads/2013/05/tears_of_steel_poster.jpg",
     genre: "Sci-Fi",
     duration: "12 min",
     rating: 5.5,
     mood: "Intense, dramatic, futuristic",
   },
   {
-    title: "Elephant's Dream",
-    description:
-      "The surreal story of two men exploring the strange and abstract world inside a machine.",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    thumbnailUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
-    genre: "Experimental",
-    duration: "10 min",
-    rating: 5.6,
-    mood: "Surreal, mysterious, introspective",
-  },
+  "title": "Ocean Waves Sample",
+  "description": "Generic sample video used for testing HTML5 video playback.",
+  "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+  "thumbnailUrl": "https://www.w3schools.com/html/pic_trulli.jpg",
+  "genre": "Nature",
+  "duration": "1 min",
+  "rating": 7.0,
+  "mood": "Calm, relaxing"
+},
   {
-    title: "For Bigger Blazes",
-    description:
-      "A dramatic fire scene designed to demonstrate the capabilities of high-resolution video.",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    thumbnailUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
-    genre: "Action",
-    duration: "1 min",
-    rating: 6.6,
-    mood: "Exciting, energetic, dramatic",
-  },
+  "title": "Color Bars Test",
+  "description": "Standard test pattern video for debugging players.",
+  "videoUrl": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4",
+  "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg",
+  "genre": "Test",
+  "duration": "10 sec",
+  "rating": 5.0,
+  "mood": "Neutral"
+},
 ];
 
 const recommendationTestOutput = {
