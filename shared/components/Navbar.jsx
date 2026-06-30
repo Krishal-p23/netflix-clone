@@ -16,8 +16,7 @@ const Navbar = () => {
                 <Image
                     src={assets.logo}
                     alt="Netflix"
-                    width={100}
-                    className="text-[#e50914] text-[25px] cursor-pointer" />
+                    className="text-[#e50914] text-[25px] cursor-pointer w-20" />
                 <ul className="flex text-sm gap-5">
                     <li className="text-[#e5e5e5] cursor-pointer hover:text-[#b3b3b3] transition-colors">Home</li>
                     <li className="text-[#e5e5e5] cursor-pointer hover:text-[#b3b3b3] transition-colors">Shows</li>
