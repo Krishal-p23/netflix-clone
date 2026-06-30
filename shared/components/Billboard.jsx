@@ -2,11 +2,14 @@
 
 import { assets } from "@/assets/assets";
 import axios from "axios";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import MovieInfoModal from "./MovieInfoModal";
 
 const Billboard = () => {
 
     const [randomMovie, setRandomMovie] = useState(null);
+    const [showInfoModal, setShowInfoModal] = useState(false);
     const videoRef = useRef(null);
 
     const fetchMovies = async () => {
@@ -19,11 +22,19 @@ const Billboard = () => {
         }
     };
 
+    const handlePlayButtonClick = () => {
+        if (videoRef.current) {
+            videoRef.current.requestFullscreen();
+        }
+    };
+
+    const handleOpenInfoModal = () => {
+        setShowInfoModal(true);
+    };
+
     useEffect(() => {
         fetchMovies();
     }, []);
-
-    console.log("randomMovie: ", randomMovie);
 
     return (
         <div className="h-screen relative">
@@ -36,6 +47,38 @@ const Billboard = () => {
                 loop
                 muted
                 playsInline />
+            <div className="absolute top-1/2 left-10 -translate-y-1/2 transform flex flex-col gap-4">
+                <h1 className="text-5xl text-white font-bold">{randomMovie?.title}</h1>
+                <p className="text-white">{randomMovie?.description}</p>
+                <div className="flex gap-2">
+                    <button
+                        className="flex gap-4 text-lg font-semibold bg-white py-2 px-5 text-black rounded-sm cursor-pointer hover:bg-[#ffffffbf]"
+                        onClick={handlePlayButtonClick}>
+                        <Image
+                            src={assets.play_icon}
+                            width={24}
+                            height={24}
+                            alt="play" />
+                        <span>Play</span>
+                    </button>
+                    <button
+                        className="flex gap-4 text-lg font-semibold bg-[#6d6d6eb3] py-2 px-5 text-white rounded-sm cursor-pointer hover:bg-[#6d6d6e66]"
+                        onClick={handleOpenInfoModal}>
+                        <Image
+                            src={assets.info_icon}
+                            width={24}
+                            height={24}
+                            alt="info" />
+                        <span>More Info</span>
+                    </button>
+                </div>
+            </div>
+            {showInfoModal ?
+                <MovieInfoModal
+                    showInfoModal={showInfoModal}
+                    setShowInfoModal={setShowInfoModal}
+                    movieData={randomMovie} />
+                : <></>}
         </div>
     );
 };

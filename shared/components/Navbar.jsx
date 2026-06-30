@@ -11,9 +11,13 @@ const Navbar = () => {
     const { data: session } = useSession();
 
     return (
-        <div className="fixed top-0 w-full flex justify-between px-12 py-4 bg-transparent transition-colors duration-1000">
+        <div className="fixed top-0 w-full flex justify-between px-12 py-4 bg-transparent transition-colors duration-1000 z-50">
             <div className="flex gap-8 items-center">
-                <h1 className="text-[#e50914] text-[25px] cursor-pointer">Netflix</h1>
+                <Image
+                    src={assets.logo}
+                    alt="Netflix"
+                    width={100}
+                    className="text-[#e50914] text-[25px] cursor-pointer" />
                 <ul className="flex text-sm gap-5">
                     <li className="text-[#e5e5e5] cursor-pointer hover:text-[#b3b3b3] transition-colors">Home</li>
                     <li className="text-[#e5e5e5] cursor-pointer hover:text-[#b3b3b3] transition-colors">Shows</li>
@@ -21,7 +25,7 @@ const Navbar = () => {
                     <li className="text-[#e5e5e5] cursor-pointer hover:text-[#b3b3b3] transition-colors">Games</li>
                 </ul>
             </div>
-            <div className="flex gap-[15px] items-center">
+            <div className="flex gap-3.75 items-center">
                 <button className="cursor-pointer">
                     <Sparkle className="text-white" />
                 </button>
